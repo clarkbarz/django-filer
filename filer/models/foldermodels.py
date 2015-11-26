@@ -225,12 +225,6 @@ class Folder(models.Model, mixins.IconsMixin):
         verbose_name = _("Folder")
         verbose_name_plural = _("Folders")
 
-# MPTT registration
-try:
-    mptt.register(Folder)
-except mptt.AlreadyRegistered:
-    pass
-
 
 @python_2_unicode_compatible
 class FolderPermission(models.Model):
